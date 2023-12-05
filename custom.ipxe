@@ -41,7 +41,7 @@ set params inst.text
 goto rhel_install
 
 :rhel_install
-set params inst.stage2=http://47.225.12.69/rhev inst.nompath
+set params ks=http://47.225.12.69/rhev/ks.cfg inst.stage2=http://47.225.12.69/rhev inst.nompath modprobe_blacklist=dm_multipath
 isset ${rhel_base_url} && goto boot || echo URL not set... && goto url_set
 goto boot
 
