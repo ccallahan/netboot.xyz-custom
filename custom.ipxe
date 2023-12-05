@@ -41,6 +41,7 @@ set params inst.text
 goto rhel_install
 
 :rhel_install
+set params inst.stage2=http://47.225.12.69/rhev
 isset ${rhel_base_url} && goto boot || echo URL not set... && goto url_set
 goto boot
 
